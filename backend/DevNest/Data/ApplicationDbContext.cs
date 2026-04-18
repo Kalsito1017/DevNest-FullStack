@@ -50,7 +50,7 @@ namespace DevNest.Data
 
             builder.Entity<JobApplication>(e =>
             {
-                // Prevent double apply (User + Job must be unique)
+                
                 e.HasIndex(x => new { x.UserId, x.JobId })
                     .IsUnique();
 
@@ -88,7 +88,7 @@ namespace DevNest.Data
                     .HasMaxLength(200)
                     .IsRequired();
 
-                // MotivationLetter left as nvarchar(max)
+               
             });
 
             // -----------------------
@@ -105,8 +105,7 @@ namespace DevNest.Data
                     .HasForeignKey(x => x.JobApplicationId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                // IMPORTANT:
-                // Do NOT cascade delete UserFile if application is deleted
+                
                 e.HasOne(x => x.UserFile)
                     .WithMany()
                     .HasForeignKey(x => x.UserFileId)
