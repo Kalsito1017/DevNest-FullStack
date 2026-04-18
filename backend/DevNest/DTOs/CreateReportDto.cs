@@ -14,10 +14,8 @@ public class CreateReportDto
     [StringLength(254)]
     public string? Email { get; set; }
 
-    // много полезно да знаеш за коя обява е
     public int? JobId { get; set; }
 
-    // по желание: от коя страница/URL
     [StringLength(500)]
     public string? PageUrl { get; set; }
 }
