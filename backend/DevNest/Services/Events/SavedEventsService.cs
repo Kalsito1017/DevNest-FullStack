@@ -21,7 +21,7 @@ namespace DevNest.Services.Events
 
         public async Task<bool> ToggleAsync(string userId, int eventId, CancellationToken ct = default)
         {
-            // Load event info (we need title/date for the email)
+           
             var evt = await db.Events
                 .AsNoTracking()
                 .Where(e => e.Id == eventId)
