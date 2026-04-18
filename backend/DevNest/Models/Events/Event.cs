@@ -4,7 +4,7 @@
 
     public string Title { get; set; } = string.Empty;
 
-    public string? EventDate { get; set; }   // "24.03.2026 - 02.04.2026"
+    public string? EventDate { get; set; }   
 
     public DateTime CreatedAt { get; set; }
 
