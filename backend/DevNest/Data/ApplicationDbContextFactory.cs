@@ -9,7 +9,7 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
         var cs = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
-                 ?? "Server=localhost,1433;Database=DevNestDB;User Id=sa;Password=DevNest!Passw0rd2026;TrustServerCertificate=True;";
+                 ?? "Server=localhost,1433;Database=DevNestDB;User Id="your";Password="yours";TrustServerCertificate=True;";
 
         optionsBuilder.UseSqlServer(cs);
 
