@@ -65,7 +65,6 @@ public class EventsService : IEventsService
         }
         catch
         {
-            // Ако JSON е счупен, не гърми целия endpoint
             return new List<SpeakerDto>();
         }
     }
