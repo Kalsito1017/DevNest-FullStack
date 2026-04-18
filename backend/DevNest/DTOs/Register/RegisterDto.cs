@@ -19,7 +19,6 @@ public class RegisterDto
     [StringLength(100, MinimumLength = 6)]
     public string Password { get; set; } = "";
 
-    // препоръчително (frontend почти винаги го има)
     [Required]
     [Compare(nameof(Password), ErrorMessage = "Passwords do not match.")]
     public string ConfirmPassword { get; set; } = "";
