@@ -83,7 +83,7 @@ namespace DevNest
                 });
             });
 
-            // ✅ Single Identity registration (your ApplicationUser)
+            //  Single Identity registration (your ApplicationUser)
             builder.Services
                 .AddIdentity<ApplicationUser, IdentityRole>(options =>
                 {
@@ -155,7 +155,7 @@ namespace DevNest
             app.MapGet("/", () => "DevNest API - try /swagger");
             app.MapGet("/health", () => new { status = "healthy", time = DateTime.UtcNow });
 
-            // ✅ FIX: migrate with retry + handle "DB already exists" race (SqlException 1801)
+           
             await MigrateWithRetryAsync(app.Services);
 
             var skipSeed = string.Equals(
