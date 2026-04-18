@@ -21,7 +21,7 @@ namespace DevNest.Models.JobApplications
 
         [Required]
         [EmailAddress]
-        [StringLength(254)] // safe upper bound commonly used for emails
+        [StringLength(254)] 
         public string Email { get; set; } = "";
 
         [Required]
